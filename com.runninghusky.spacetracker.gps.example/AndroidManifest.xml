@@ -4,8 +4,11 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
-<!--    Added permissions that will allow the application to use the GPS-->
+    <!-- Added permissions that will allow the application to use the GPS -->
+    <!-- Coarse location used for cell and wifi location, not currently used in application -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    
+    <!-- Fine location is used specifically for the GPS -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <uses-sdk android:minSdkVersion="8" />
@@ -20,10 +23,10 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name" >
         <activity
+            android:name=".StartActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
-            android:label="@string/app_name"
-            android:name=".StartActivity" >
-            <intent-filter >
+            android:label="@string/app_name" >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
